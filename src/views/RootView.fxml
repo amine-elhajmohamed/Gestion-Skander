@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+
+<AnchorPane minHeight="700.0" minWidth="1100.0" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.RootViewController">
+   <children>
+      <TabPane prefHeight="160.0" prefWidth="1022.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Ventes">
+               <content>
+                  <AnchorPane prefHeight="321.0" prefWidth="1022.0">
+                     <children>
+                        <Button fx:id="btnClients" contentDisplay="TOP" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" text="Clients" textAlignment="CENTER" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icons/ClientsIcon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnAddClient" contentDisplay="TOP" layoutX="108.0" layoutY="14.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" text="Nouv.&#10;Client" textAlignment="CENTER" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="15.0">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icons/AddClientIcon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <FlowPane alignment="CENTER" layoutX="45.0" layoutY="105.0" prefWidth="165.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="105.0">
+                           <children>
+                              <Label text="Gestion des clients" />
+                           </children>
+                        </FlowPane>
+                        <Button fx:id="btnBills" contentDisplay="TOP" layoutX="198.0" layoutY="16.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" text="Factures&#10;" textAlignment="CENTER" AnchorPane.leftAnchor="195.0" AnchorPane.topAnchor="15.0">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icons/FacturesIcon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnAddBill" contentDisplay="TOP" layoutX="275.0" layoutY="17.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" text="Nouv.&#10;Facture" textAlignment="CENTER" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="15.0">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icons/AddFactureIcon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <FlowPane alignment="CENTER" layoutX="220.0" layoutY="105.0" prefWidth="165.0" AnchorPane.leftAnchor="195.0" AnchorPane.topAnchor="105.0">
+                           <children>
+                              <Label text="Gestion des factures" />
+                           </children>
+                        </FlowPane>
+                        <Separator layoutX="212.0" layoutY="-20.0" orientation="VERTICAL" prefHeight="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="185.0" AnchorPane.topAnchor="0.0" />
+                        <Separator layoutX="366.0" layoutY="-21.0" orientation="VERTICAL" prefHeight="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="365.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+            <Tab text="Stock">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnArticles" contentDisplay="TOP" layoutX="21.0" layoutY="14.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" text="Articles" textAlignment="CENTER" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icons/ProductsIcon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnAddArticle" contentDisplay="TOP" layoutX="114.0" layoutY="15.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" text="Nouv.&#10;Article" textAlignment="CENTER" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="15.0">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icons/AddProductIcon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnEntryStock" contentDisplay="TOP" layoutX="230.0" layoutY="24.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" text="Entrées &#10;en stock" textAlignment="CENTER" AnchorPane.leftAnchor="195.0" AnchorPane.topAnchor="15.0">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icons/StockInputIcon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnTransferStock" contentDisplay="TOP" layoutX="322.0" layoutY="29.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" text="Transfert&#10;de stock" textAlignment="CENTER" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="15.0">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icons/StockTransfertIcon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Separator layoutX="213.0" layoutY="38.0" orientation="VERTICAL" prefHeight="57.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="185.0" AnchorPane.topAnchor="0.0" />
+                        <Separator layoutX="417.0" layoutY="33.0" orientation="VERTICAL" prefHeight="64.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="365.0" AnchorPane.topAnchor="0.0" />
+                        <Button fx:id="btnAddDepot" layoutX="449.0" layoutY="19.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" text="Nouv. dépôt" textAlignment="CENTER" AnchorPane.leftAnchor="375.0" AnchorPane.topAnchor="14.0">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icons/AddDepotIcon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnDepots" layoutX="433.0" layoutY="61.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" text="Dépôts        " textAlignment="CENTER" AnchorPane.leftAnchor="375.0" AnchorPane.topAnchor="57.0">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icons/DepotsIcon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <FlowPane alignment="CENTER" layoutX="40.0" layoutY="105.0" prefWidth="165.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="105.0">
+                           <children>
+                              <Label text="Gestion des articles" />
+                           </children>
+                        </FlowPane>
+                        <FlowPane alignment="CENTER" layoutX="225.0" layoutY="105.0" prefWidth="165.0" AnchorPane.leftAnchor="195.0" AnchorPane.topAnchor="105.0">
+                           <children>
+                              <Label text="Gestion des stocks" />
+                           </children>
+                        </FlowPane>
+                        <FlowPane alignment="CENTER" layoutX="390.0" layoutY="105.0" prefWidth="140.0" AnchorPane.leftAnchor="375.0" AnchorPane.topAnchor="105.0">
+                           <children>
+                              <Label text="Gestion des dépôts" />
+                           </children>
+                        </FlowPane>
+                        <Separator layoutX="526.0" layoutY="-23.0" orientation="VERTICAL" prefHeight="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="0.0" />
+                        <Button fx:id="btnInventaires" contentDisplay="TOP" layoutX="534.0" layoutY="17.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="90.0" text="Inventaires" textAlignment="CENTER" visible="false" AnchorPane.leftAnchor="530.0" AnchorPane.topAnchor="15.0">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icons/InventairesIcon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnAddInventaire" contentDisplay="TOP" layoutX="636.0" layoutY="17.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="90.0" text="Nouv.&#10;inventaire" textAlignment="CENTER" visible="false" AnchorPane.leftAnchor="625.0" AnchorPane.topAnchor="15.0">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icons/AddInventaireIcon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Separator layoutX="738.0" layoutY="-36.0" orientation="VERTICAL" prefHeight="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="720.0" AnchorPane.topAnchor="0.0" />
+                        <FlowPane alignment="CENTER" layoutX="548.0" layoutY="105.0" prefWidth="185.0" AnchorPane.leftAnchor="530.0" AnchorPane.topAnchor="105.0">
+                           <children>
+                              <Label text="Gestion des inventaires" textAlignment="CENTER" visible="false" />
+                           </children>
+                        </FlowPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Separator layoutX="16.0" layoutY="174.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="160.0" />
+      <AnchorPane fx:id="containerAP" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="165.0" />
+   </children>
+</AnchorPane>

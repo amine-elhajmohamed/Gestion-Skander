@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="220.0" prefWidth="420.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.DepotDetailsController">
+   <children>
+      <TextField fx:id="txtName" layoutX="98.0" layoutY="25.0" prefHeight="27.0" prefWidth="252.0" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="25.0" />
+      <TextArea fx:id="txtObservations" layoutX="139.0" layoutY="80.0" prefHeight="121.0" prefWidth="252.0" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="75.0" />
+      <Label layoutX="18.0" layoutY="30.0" text="Nom : " AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="30.0" />
+      <Label layoutX="30.0" layoutY="81.0" text="Observations : " AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="80.0" />
+   </children>
+</AnchorPane>

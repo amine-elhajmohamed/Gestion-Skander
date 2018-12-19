@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="1066.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.AllDepotsController">
+   <children>
+      <ListView fx:id="listViewDepots" layoutX="25.0" layoutY="24.0" prefHeight="397.0" prefWidth="250.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0" />
+      <AnchorPane fx:id="anchorPaneDepotDetails" layoutX="285.0" layoutY="21.0" prefHeight="494.0" prefWidth="774.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="290.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <FlowPane alignment="CENTER" hgap="100.0" prefHeight="113.0" prefWidth="442.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="350.0">
+               <children>
+                  <Button fx:id="btnNumberOfProducts" maxHeight="70.0" maxWidth="100.0" minHeight="70.0" minWidth="100.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="100.0" text="#######&#10;articles en stock&#10;" textAlignment="CENTER" wrapText="true" />
+                  <Button fx:id="btnNumberOfBills" maxHeight="70.0" maxWidth="100.0" minHeight="70.0" minWidth="100.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="100.0" text="#######&#10;factures&#10;" textAlignment="CENTER" wrapText="true" />
+                  <Button fx:id="btnNumberOfStockTransfer" maxHeight="70.0" maxWidth="100.0" minHeight="70.0" minWidth="100.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="100.0" text="#######&#10;transfert de stock&#10;" textAlignment="CENTER" wrapText="true" />
+               </children>
+            </FlowPane>
+            <TextArea fx:id="txtObservations" editable="false" prefHeight="80.0" prefWidth="400.0" wrapText="true" AnchorPane.leftAnchor="90.0" AnchorPane.topAnchor="110.0" />
+            <Label fx:id="lblDepotName" text="DEPOT_NAME" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font name="System Bold" size="34.0" />
+               </font>
+            </Label>
+            <Label text="Observations : " AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="85.0" />
+            <Button fx:id="btnModify" layoutX="421.0" layoutY="194.0" mnemonicParsing="false" text="Modifier" AnchorPane.leftAnchor="420.0" AnchorPane.topAnchor="195.0" />
+            <FlowPane alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="255.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="50.0">
+               <children>
+                  <Label text="Total bénéfice : " />
+                  <Label fx:id="lblTotalGain" text="############">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </FlowPane>
+            <FlowPane alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="200.0" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="250.0">
+               <children>
+                  <Label text="Dette : ">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblDebt" text="############">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </FlowPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.AddEditDepotDetailsController">
+   <children>
+      <FlowPane alignment="CENTER" hgap="20.0" layoutX="68.0" layoutY="376.0" prefHeight="60.0" prefWidth="733.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button fx:id="btnCancel" mnemonicParsing="false" text="Annuler" />
+            <Button fx:id="btnAdd" mnemonicParsing="false" text="Ajouter" />
+         </children>
+      </FlowPane>
+      <FlowPane fx:id="containerFP" alignment="CENTER" layoutX="54.0" layoutY="51.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   </children>
+</AnchorPane>

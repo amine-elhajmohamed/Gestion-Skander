@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="745.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.AddEditBillController">
+   <children>
+      <FlowPane alignment="CENTER_LEFT" layoutX="322.0" layoutY="-44.0" prefHeight="40.0" prefWidth="500.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <Label text="FACTURE N°">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblBillNumber" text="#############">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </FlowPane>
+      <FlowPane alignment="CENTER_RIGHT" hgap="5.0" layoutX="246.0" layoutY="132.0" maxWidth="600.0" minWidth="600.0" prefHeight="40.0" prefWidth="600.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <Label text="Date :" />
+            <DatePicker fx:id="date" editable="false" prefHeight="25.0" prefWidth="180.0" />
+            <Label text="      Heure :" />
+            <Spinner fx:id="spinerHoures" editable="true" maxWidth="60.0" minWidth="60.0" prefHeight="27.0" prefWidth="60.0" />
+            <Label text=":" />
+            <Spinner fx:id="spinerMinutes" editable="true" maxWidth="60.0" minWidth="60.0" prefWidth="60.0" />
+         </children>
+      </FlowPane>
+      <GridPane layoutX="26.0" layoutY="82.0" maxWidth="380.0" minWidth="380.0" prefHeight="80.0" prefWidth="380.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="80.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="110.0" minWidth="110.0" prefWidth="110.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="270.0" minWidth="270.0" prefWidth="270.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Code du client :" />
+            <Label text="Nom du client :" GridPane.rowIndex="1" />
+            <TextField fx:id="txtClientCode" GridPane.columnIndex="1" />
+            <TextField fx:id="txtClientName" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <FlowPane alignment="CENTER_RIGHT" hgap="10.0" layoutX="481.0" layoutY="91.0" prefHeight="40.0" prefWidth="365.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="80.0">
+         <children>
+            <Label text="Dépôt : " />
+            <ComboBox fx:id="comboBoxDepot" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" />
+         </children>
+      </FlowPane>
+      <AnchorPane layoutX="21.0" layoutY="175.0" prefHeight="450.0" prefWidth="905.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="175.0">
+         <children>
+            <TableView fx:id="tableViewProducts" editable="true" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn fx:id="columnCode" maxWidth="250.0" minWidth="250.0" prefWidth="250.0" text="Code" />
+                <TableColumn fx:id="columnName" minWidth="300.0" prefWidth="300.0" text="Article" />
+                  <TableColumn fx:id="columnBuyedPrice" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" text="Prix d'achat" />
+                  <TableColumn fx:id="columnSelledPrice" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" text="Prix de vente" />
+                  <TableColumn fx:id="columnQNT" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" text="Quantité" />
+                  <TableColumn fx:id="columnTotal" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="Total" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <FlowPane fx:id="paneAddProduct" alignment="CENTER_LEFT" hgap="10.0" prefHeight="100.0" prefWidth="761.0" vgap="8.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Label text="  Code article :" />
+                  <TextField fx:id="txtProductCode" prefHeight="27.0" prefWidth="150.0" />
+                  <Label text="Article :" />
+                  <TextField fx:id="txtProductName" editable="false" focusTraversable="false" prefHeight="27.0" prefWidth="320.0" />
+                  <Label text="Prix d'achat :" />
+                  <TextField fx:id="txtProductBuyedPrice" editable="false" focusTraversable="false" prefHeight="27.0" prefWidth="130.0" />
+                  <Label text="Prix de vente  :" />
+                  <TextField fx:id="txtProductSelledPrice" prefHeight="27.0" prefWidth="130.0" />
+                  <Label text="  Quantité :" />
+                  <TextField fx:id="txtProductQnt" prefHeight="27.0" prefWidth="59.0" />
+                  <Button fx:id="btnAddProduct" mnemonicParsing="false" text="Ajouter" />
+               </children>
+            </FlowPane>
+         </children>
+      </AnchorPane>
+      <GridPane layoutX="933.0" layoutY="635.0" maxWidth="290.0" minWidth="290.0" prefHeight="132.0" prefWidth="290.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="600.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Total :" />
+            <Label text="Reduction :" GridPane.rowIndex="1" />
+            <Label text="Net à Payer :" GridPane.rowIndex="2" />
+            <TextField fx:id="txtTotal" editable="false" focusTraversable="false" GridPane.columnIndex="1" />
+            <TextField fx:id="txtFinalToPay" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <FlowPane alignment="CENTER_LEFT" hgap="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <TextField fx:id="txtDiscount" maxWidth="70.0" minWidth="70.0" prefHeight="27.0" prefWidth="70.0" />
+                  <Label text="\%" />
+               </children>
+            </FlowPane>
+         </children>
+      </GridPane>
+      <AnchorPane fx:id="panePayement" layoutX="32.0" layoutY="640.0" maxHeight="206.0" minHeight="140.0" prefHeight="206.0" prefWidth="986.0" visible="false" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="540.0">
+         <children>
+            <Label layoutX="618.0" layoutY="47.0" text="Paiement" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <GridPane layoutX="17.0" layoutY="28.0" maxWidth="270.0" minWidth="270.0" prefHeight="90.0" prefWidth="270.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="40.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Montant à payer :" />
+                  <Label text="Montant payé : " GridPane.rowIndex="1" />
+                  <Label text="Reste à payer :" GridPane.rowIndex="2" />
+                  <Label fx:id="lblMoneyTotal" text="MONT_A_PAYER" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblMoneyPayed" text="MONT_PAYE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblMoneyToPay" text="REST_A_PAYE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <Button fx:id="btnAddPayment" layoutX="92.0" layoutY="139.0" mnemonicParsing="false" text="Ajouter paiement" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="140.0" />
+            <Label layoutX="323.0" layoutY="22.0" text="HISTORIQUE DE PAIEMENT" AnchorPane.leftAnchor="330.0" AnchorPane.topAnchor="30.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <TableView fx:id="tableViewPayments" layoutX="334.0" layoutY="46.0" maxWidth="440.0" minWidth="440.0" prefHeight="115.0" prefWidth="440.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="340.0" AnchorPane.topAnchor="55.0">
+              <columns>
+                <TableColumn fx:id="columnPaymentDate" maxWidth="140.0" minWidth="140.0" prefWidth="140.0" text="Date" />
+                <TableColumn fx:id="columnPaymentType" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" text="Type" />
+                  <TableColumn fx:id="columnPaymentAmount" prefWidth="75.0" text="Montant" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <FlowPane fx:id="paneButtons" alignment="CENTER" hgap="10.0" layoutX="16.0" layoutY="607.0" prefHeight="50.0" prefWidth="991.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+         <children>
+            <Button fx:id="btnCancel" mnemonicParsing="false" text="Annuler" />
+            <Button fx:id="btnAdd" mnemonicParsing="false" text="Ajouter" />
+         </children>
+      </FlowPane>
+   </children>
+</AnchorPane>

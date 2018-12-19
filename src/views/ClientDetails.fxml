@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="350.0" maxWidth="-Infinity" minHeight="280.0" minWidth="-Infinity" prefHeight="280.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.ClientDetailsController">
+   <children>
+      <GridPane layoutX="38.0" layoutY="41.0" prefHeight="220.0" prefWidth="270.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="30.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="278.0" minWidth="10.0" prefWidth="273.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Code :" />
+            <Label text="Prenom :" GridPane.rowIndex="1" />
+            <Label text="Nom : " GridPane.rowIndex="2" />
+            <TextField fx:id="txtCode" maxWidth="200.0" minWidth="200.0" prefHeight="27.0" prefWidth="200.0" GridPane.columnIndex="1" />
+            <TextField fx:id="txtName" maxWidth="200.0" minWidth="200.0" prefHeight="27.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtLastName" maxWidth="200.0" minWidth="200.0" prefHeight="27.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Adresse :" GridPane.rowIndex="3" GridPane.valignment="TOP" />
+            <TextArea fx:id="txtAdress" maxWidth="200.0" minWidth="200.0" prefHeight="100.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="343.0" layoutY="56.0" prefHeight="214.0" prefWidth="257.0" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="35.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="176.0" minWidth="10.0" prefWidth="166.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" valignment="TOP" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Téléphones :" />
+            <Label text="Fax :" GridPane.rowIndex="2" />
+            <ListView fx:id="listViewPhones" editable="true" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
+            <ListView fx:id="listViewFaxes" editable="true" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
